@@ -1,3 +1,10 @@
+:root{
+    --foreground-colour: #1b3644;
+    --background-colour: #fcfcfc;
+    --link-colour: #2f97c1;
+    --active-colour: #59a96a;
+}
+
 img {
     image-rendering: -moz-crisp-edges;
     image-rendering: -o-crisp-edges;
@@ -22,27 +29,110 @@ html {
 
 body {
     height:100%;
-    background-color: #fcfcfc;
+    background-color: var(--background-color);/**/
 }
 
 h1{
     font-family: hiroshige;
     font-size: 74px;
     letter-spacing: 4px;
+    color: var(--foreground-colour);
+}
+
+h2{
+    font-family: hiroshige;
+    font-size: 50px;
+    letter-spacing: 4px;
+    color: var(--foreground-colour);
+}
+
+h3{
+    font-family: hiroshige;
+    /*font-size: 74px;*/
+    letter-spacing: 4px;
+    color: var(--foreground-colour);
+}
+
+p {
+    color: var(--foreground-colour);
+    font-family: hiroshige;
+}
+
+a {
+    font-family: hiroshige;
+    color: var(--foreground-colour);
+}
+
+a:link {
+    color: var(--link-colour);
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: var(--active-colour);
 }
 
 .center {
-    position: absolute;
+    display: flex;
+    /*position: absolute;*/
     margin: auto;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    width: 900px;
-    height: 450px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.center-column {
     display: flex;
+    /*position: absolute;*/
+    width: 100%;
+    height: 100%;
+    margin-top: 10%;
+    align-items:center;
+    justify-content: flex-start;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.line-break {
+    width: 100%;
+  }
+
+.center hr {
+    width: 100%;
+    border: none;
+}
+
+.center link-seperator {
+    width: 10%;
+}
+
+.link-contents {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.emoticons {
+    display: flex;
+    width: 80%;
+    /*position: absolute;*/
     align-items:center;
     justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 #titleleft {
@@ -56,4 +146,10 @@ h1{
     width: 49%;
     display: inline-block;
     top: -50%;
+}
+
+.emoticon-image {
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.037);
 }
