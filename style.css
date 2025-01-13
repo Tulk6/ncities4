@@ -53,7 +53,7 @@ h3{
     color: var(--foreground-colour);
 }
 
-p {
+p, button {
     color: var(--foreground-colour);
     font-family: hiroshige;
 }
