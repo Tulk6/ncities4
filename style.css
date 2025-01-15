@@ -1,5 +1,6 @@
 :root{
     --foreground-colour: #1b3644;
+    --foreground-colour-light: #1b364412;
     --background-colour: #fcfcfc;
     --link-colour: #2f97c1;
     --active-colour: #59a96a;
@@ -41,7 +42,7 @@ h1{
 
 h2{
     font-family: hiroshige;
-    font-size: 50px;
+    font-size: 3.6vw;
     letter-spacing: 4px;
     color: var(--foreground-colour);
 }
@@ -56,6 +57,24 @@ h3{
 p, button {
     color: var(--foreground-colour);
     font-family: hiroshige;
+}
+
+label {
+    color: var(--foreground-colour);
+    font-family: hiroshige;
+    font-size: 12pt;
+}
+
+button {
+    background-color: var(--background-color);
+    border: 2px solid var(--foreground-colour-light);
+    border-radius: 6px;
+    font-size: 12pt;
+}
+
+button:hover {
+    /*color: var(--active-colour);*/
+    border: 2px solid var(--foreground-colour);
 }
 
 a {
@@ -149,7 +168,9 @@ a:hover {
 }
 
 .emoticon-image {
+    height: 5vw;
+    width: auto;
     margin: 5px;
     padding: 5px;
-    border: 2px solid rgba(0, 0, 0, 0.037);
+    border: 2px solid var(--foreground-colour-light);
 }
