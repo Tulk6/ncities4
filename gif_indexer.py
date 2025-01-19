@@ -21,8 +21,12 @@ out_str = out_str[:-2]+'\n}'
 print(out_str)
 
 html_str = ''
-for theme in js_index.keys():
-    html_str += f'<input type="checkbox" id="tag_{theme}">\n'
-    html_str += f'<label for="tag_{theme}">{theme}</label>\n'
+for theme in sorted(js_index.keys()):
+    if theme == "all": continue
+    #html_str += f'<input type="checkbox" id="tag_{theme}">\n'
+    #html_str += f'<label> for="tag_{theme}">{theme}</label>\n'
+    html_str += f'<label><input type="checkbox" name="{theme} id="tag_{theme}">{theme}</label>\n'
+
+    #<label><input type="checkbox" name="option5"> Option 5</label>
 
 print(html_str)
