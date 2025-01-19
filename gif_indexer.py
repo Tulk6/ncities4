@@ -30,3 +30,18 @@ for theme in sorted(js_index.keys()):
     #<label><input type="checkbox" name="option5"> Option 5</label>
 
 print(html_str)
+
+js_combos = {}
+for gif, themes in gif_index.items():
+    for theme in themes:
+        if theme not in js_combos:
+            js_combos[theme] = set()
+        js_combos[theme].update(themes)
+
+js_combos_txt = 'var combos = {\n'
+for theme, combos in js_combos.items():
+    js_combos_txt += f"\t'{theme}': {list(combos)},\n"
+
+js_combos_txt = js_combos_txt[:-2]+'\n}'
+
+print(js_combos_txt)
